@@ -1,0 +1,48 @@
+<div class="head"> 
+    <div class="navbar">
+        <a href="home.html">Home</a>
+        
+    
+      
+        <div id="logout" style="float:right"><a (click)="logout()">Logout</a></div>
+        
+      </div>
+  
+</div>
+
+<div class="lefttop">
+  <div class="sidenav">
+      <a (click)="profile()"><i class="fa fa-user-circle"></i> My Profile</a>
+      <a (click)="edit()"><i class="fa fa-edit"></i> Edit Profile</a>
+
+</div>
+
+        
+</div>
+
+<div class="leftbottom">
+  
+    <div class="sidenav">
+        <a *ngIf="status == 'paid'" ><i class="fa fa-fw fa-users"></i>  My Users</a>
+        <a *ngIf="status == 'paid'" (click)="cal()"><i class="fas fa-calendar-alt"></i>  &nbsp;Events</a>
+        <a *ngIf="status == 'paid'" (click)="charges()"><i class="fa fa-money"></i>  My charges</a>
+        <a *ngIf="status == 'paid'" (click)="images()"><i class="fas fa-images"></i>  My Gallery</a>
+        <a *ngIf="status == 'paid'" (click)="table()"><i class="fa fa-fw fa-users"></i>  Users Request</a>
+        <a (click)="requestStatus()"><i class="fa fa-fw fa-users"></i> Request Status</a>
+        <a *ngIf="status == 'accepted'" (click)="payment()"><i class="fa fa-credit-card"></i>  Payment</a>
+
+
+ </div>
+      
+</div>
+  
+
+<div class="main">
+<!-- <app-charges></app-charges> -->
+<router-outlet></router-outlet>
+</div>
+
+<!-- <div class="right">
+<p> </p>
+</div> -->
+

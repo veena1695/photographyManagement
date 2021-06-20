@@ -1,0 +1,114 @@
+body {
+    background: black;
+  }
+  .button-red,.button-yellow, .button-green {
+    background-color: #004A7F;
+    -webkit-border-radius: 10px;
+    border-radius: 3px;
+    border: none;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Arial;
+    font-size: 20px;
+    padding: 2px 4px;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  @-webkit-keyframes glowing-red {
+    0% { background-color: red; -webkit-box-shadow: 0 0 3px red; }
+    50% { background-color: red; -webkit-box-shadow: 0 0 40px red; }
+    100% { background-color: red; -webkit-box-shadow: 0 0 3px red; }
+  }
+  
+  @-moz-keyframes glowing-red {
+    0% { background-color: red; -moz-box-shadow: 0 0 3px red; }
+    50% { background-color: red; -moz-box-shadow: 0 0 40px red; }
+    100% { background-color: red; -moz-box-shadow: 0 0 3px red; }
+  }
+  
+  @-o-keyframes glowing-red {
+    0% { background-color: red; box-shadow: 0 0 3px red; }
+    50% { background-color: red; box-shadow: 0 0 40px red; }
+    100% { background-color: red; box-shadow: 0 0 3px red; }
+  }
+  
+  @keyframes glowing-red {
+    0% { background-color: red; box-shadow: 0 0 3px red; }
+    50% { background-color: red; box-shadow: 0 0 40px red; }
+    100% { background-color: red; box-shadow: 0 0 3px red; }
+  }
+
+  @-webkit-keyframes glowing-green {
+    0% { background-color: #97bf2d; -webkit-box-shadow: 0 0 3px #97bf2d; }
+    50% { background-color: #97bf2d; -webkit-box-shadow: 0 0 40px #97bf2d; }
+    100% { background-color: #97bf2d; -webkit-box-shadow: 0 0 3px #97bf2d; }
+  }
+  
+  @-moz-keyframes glowing-green {
+    0% { background-color: #97bf2d; -moz-box-shadow: 0 0 3px #97bf2d; }
+    50% { background-color: #97bf2d; -moz-box-shadow: 0 0 40px #97bf2d; }
+    100% { background-color: #97bf2d; -moz-box-shadow: 0 0 3px #97bf2d; }
+  }
+  
+  @-o-keyframes glowing-green {
+    0% { background-color: #97bf2d; box-shadow: 0 0 3px #97bf2d; }
+    50% { background-color: #97bf2d; box-shadow: 0 0 40px #97bf2d; }
+    100% { background-color: #97bf2d; box-shadow: 0 0 3px #97bf2d; }
+  }
+  
+  @keyframes glowing-green {
+    0% { background-color: #97bf2d; box-shadow: 0 0 3px #97bf2d; }
+    50% { background-color: #97bf2d; box-shadow: 0 0 40px #97bf2d; }
+    100% { background-color: #97bf2d; box-shadow: 0 0 3px #97bf2d; }
+  }
+
+  @-webkit-keyframes glowing-yellow {
+    0% { background-color: yellow; -webkit-box-shadow: 0 0 3px yellow; }
+    50% { background-color: yellow; -webkit-box-shadow: 0 0 40px yellow; }
+    100% { background-color: yellow; -webkit-box-shadow: 0 0 3px yellow; }
+  }
+  
+  @-moz-keyframes glowing-yellow {
+    0% { background-color: yellow; -moz-box-shadow: 0 0 3px yellow; }
+    50% { background-color: yellow; -moz-box-shadow: 0 0 40px yellow; }
+    100% { background-color: yellow; -moz-box-shadow: 0 0 3px yellow; }
+  }
+  
+  @-o-keyframes glowing-yellow {
+    0% { background-color: yellow; box-shadow: 0 0 3px yellow; }
+    50% { background-color: yellow; box-shadow: 0 0 40px yellow; }
+    100% { background-color: yellow; box-shadow: 0 0 3px yellow; }
+  }
+  
+  @keyframes glowing-yellow {
+    0% { background-color: yellow; box-shadow: 0 0 3px yellow; }
+    50% { background-color: yellow; box-shadow: 0 0 40px yellow; }
+    100% { background-color: yellow; box-shadow: 0 0 3px yellow; }
+  }
+  
+  .button-green {
+    -webkit-animation: glowing-green 1500ms infinite;
+    -moz-animation: glowing-green 1500ms infinite;
+    -o-animation: glowing-green 1500ms infinite;
+    animation: glowing-green 1500ms infinite;
+  }
+
+  .button-red {
+    -webkit-animation: glowing-red 1500ms infinite;
+    -moz-animation: glowing-red 1500ms infinite;
+    -o-animation: glowing-red 1500ms infinite;
+    animation: glowing-red 1500ms infinite;
+  }
+
+  .button-yellow {
+    -webkit-animation: glowing-yellow 1500ms infinite;
+    -moz-animation: glowing-yellow 1500ms infinite;
+    -o-animation: glowing-yellow 1500ms infinite;
+    animation: glowing-yellow 1500ms infinite;
+  }
+
+
+
+  

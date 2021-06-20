@@ -1,0 +1,14 @@
+<h1>File Upload</h1>
+<div *ngFor="let j of imgCount;let i = index">
+  <input type="file" (change)="onFileSelected($event)"> 
+  <input *ngIf="i == imgCount.length-1" type="button" value="+" (click)="addFile()">&nbsp;
+  <input *ngIf="i == imgCount.length-1" type="button" value="-" (click)="removeFile()">
+</div>
+<input type="button" value="Upload" (click)="onUpload()">
+
+<br>
+<br>
+<br>
+<br>
+<h3 *ngIf ="allImages.length>0">Images Uploaded</h3>
+<img *ngFor="let img of allImages" [src]="img" width="100px" height="100px" alt="Loading">&nbsp;

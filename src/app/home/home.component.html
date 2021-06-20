@@ -1,0 +1,54 @@
+<div class= "marquee"><ng-marquee>
+  <p style="font-size:20px; margin-top: 0.9%; font:bold ; font: italic;">We capture your memories forever</p>
+</ng-marquee></div>
+<div class="navbar">
+    <!-- <a href="home.html">Home</a> -->
+    
+    
+   <div class="dropdown">
+      <button class="dropbtn">Photography Style
+        
+      </button>
+      <div class="dropdown-content">
+        <a *ngFor="let item of menu">{{item}}</a>
+        
+      </div>
+    </div>
+    <a >About</a>
+    <a >Contact</a>
+    
+    <div id="login" style="float:right"><a  (click)="goToLogin()">LogIn</a></div>
+
+    <div class="dropdown" id="register" style="float:right">
+        <button class="dropbtn">Register
+          
+        </button>
+        <div class="dropdown-content">
+          <a *ngFor="let item of reg" (click)="goToReg(item)">{{item}}</a>
+          
+        </div>
+      </div>
+  
+      
+    <!-- <div id="logout" style="float:right"><a href="#" onclick="logout()">Logout</a></div> -->
+    <div style="float:right"><a href="#about"><label id="usrName"></label></a></div>
+  </div>
+  
+  <div style="max-width:1500px">
+      <img class="mySlides" *ngIf="flag == 1" src="../../assets/1.jpg" style="width:150%" align="center">
+      <img class="mySlides" *ngIf="flag == 2" src="../../assets/2.jpg" style="width:150%" align="center">
+      <img class="mySlides" *ngIf="flag == 3" src="../../assets/3.jpg" style="width:150%" align="center">
+       <img class="mySlides" *ngIf="flag == 4" src="../../assets/4.jpg" style="width:150%" align="center">
+       <img class="mySlides" *ngIf="flag == 5" src="../../assets/5.jpg" style="width:150%" align="center">
+       <img class="mySlides" *ngIf="flag == 6" src="../../assets/13.jpg" style="width:150%" align="center">
+      
+      </div>
+
+
+  
+  
+  
+  
+  
+
+

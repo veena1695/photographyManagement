@@ -1,0 +1,42 @@
+<div class= "marquee"><ng-marquee>
+        <p style="font-size:20px; margin-top: 0.9%; font:bold ; font: italic;">We capture your memories forever</p>
+      </ng-marquee></div>
+      <div class="navbar">
+          <a (click)="goToHome()">Home</a>
+          
+          <!-- <div id="login" style="float:right"><a >LogIn</a></div> -->
+          <div class="dropdown" id="register" style="float:right">
+              <button class="dropbtn">Register
+                
+              </button>
+              <div class="dropdown-content">
+                <a *ngFor="let item of reg" (click)="goToReg(item)">{{item}}</a>
+                
+              </div>
+            </div>
+        
+          <!-- <div id="logout" style="float:right"><a href="#" onclick="logout()">Logout</a></div> -->
+          <div style="float:right"><a href="#about"><label id="usrName"></label></a></div>
+        </div>
+    
+        <div class="form_field_wrapper">
+            <div align="center" class="form_heading">
+              <h2><u>LogIn Here</u></h2>
+            </div>
+           
+            <div class="field_container">
+              <label>Email</label>
+              <input type="email" name="applyemail" placeholder="example@abc.com" class="applyemail" [(ngModel)]="user" required />
+              <span class="error-message email-error"></span>
+            </div>
+          
+            
+              <div class="field_container">
+                  <label for="password">Password</label>
+                  <input type="password" name="pass" placeholder="Type your password" class="" [(ngModel)]="pass" required />
+                  <span class="error-message pass-error"></span>
+                </div>
+               
+                  <input type="submit" class="btn" value="Login" (click)="loginUser()">
+          </div>
+    

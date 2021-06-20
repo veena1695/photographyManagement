@@ -1,0 +1,70 @@
+<div *ngIf="step == 1" id="tab-1" class="tab position_date_sec active">
+<div class="form_field_wrapper">
+        <div class="field_container">
+          <label>Your Photography Style</label>
+          <select [(ngModel)]="photoStyle">
+            <option *ngFor="let i of photoStyleArr">{{i}}</option>
+          </select>
+        </div>
+    </div>
+</div>
+  
+  <div *ngIf="step == 2" id="tab-2" class="tab personal_details">
+    <div class="form_field_wrapper">
+      <div class="form_heading">
+        <strong><u>Personal Details:</u></strong>
+      </div>
+      <div class="field_container">
+        <label>Name</label>
+        <input type="text" name="applyname" class="applyname" [(ngModel)]="name" placeholder="John Doe" required minlength="2" />
+        <span class="error-message name-error"></span>
+      </div>
+      <div class="field_container">
+        <label>Email</label>
+        <input type="email" name="applyemail" [(ngModel)]="email" placeholder="example@abc.com" class="applyemail" required />
+        <span class="error-message email-error"></span>
+      </div>
+      <div class="field_container">
+        <label>Address</label>
+        <textarea name="applyaddress" required [(ngModel)]="address" placeholder="House No./Flat no., Apartment name/Building Name, City - Postal code, State, Country" class="applyaddress"></textarea>
+        <span class="error-message address-error"></span>
+      </div>
+      <div class="field_container">
+          <label for="Phone">Phone</label>
+          <input type="tel" name="phone" [(ngModel)]="phone" placeholder="6789899090" class="" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required />
+          <span class="error-message phone-error"></span>
+        </div>
+    </div>
+  </div>
+  <div *ngIf="step == 3" id="tab-3" class="tab history_emp">
+    <div class="form_field_wrapper">
+      <div class="field_container">
+        <label>City</label>
+        <select [(ngModel)]="city">
+        <option *ngFor="let j of cityArr">{{j}}</option>
+      </select>
+      </div>
+      <div class="field_container">
+        <label>State</label>
+        <select [(ngModel)]="state">
+        <option *ngFor="let k of stateArr">{{k}}</option>
+        </select>
+      </div>
+    </div>
+    </div>
+<div *ngIf="step == 4" id="tab-4" class="tab education_additional_qualifications">
+<div class="form_field_wrapper">
+    <div class="field_container">
+        <label>About Yourself</label>
+        <textarea [(ngModel)]="about" name="applyaddress" required placeholder="Write something About Yourself" class="applyaddress"></textarea>
+        <span class="error-message address-error"></span>
+      </div>
+</div>
+</div>
+<div class="tab-footer">
+<div class="pad-lr-15 tabs-button">
+<div class="prev-btn"><a *ngIf="step > 1" (click)="prev()" class="prev button btn-arrow-right" >Prev</a></div>
+<div class="next-btn"><a *ngIf="step < 4" (click)="next()" class="next button btn-arrow-right">Next</a></div>
+<div class="submit-btn"><input type="submit" *ngIf="step == 4" (click)="register()" name="submit" id="submit" class="button"></div>
+</div>
+</div>

@@ -1,0 +1,23 @@
+<style> 
+  table, th, td { 
+      border: 1px solid black; 
+      border-collapse: collapse; 
+      margin-left: 20px;
+      margin-top: 20px;
+  } 
+</style>  
+  
+<table *ngIf="allMem.length>0" style="width:90%"> 
+    <tr> 
+      <th *ngFor="let j of headings">{{j}}</th> 
+    </tr> 
+    <tr *ngFor = "let i of allMem"> 
+        <td>{{i.name}}</td> 
+        <td>{{i.phone}}</td> 
+        <td>{{i.email}}</td> 
+        <td>{{i.photoStyle}}</td> 
+        <td>{{i.address}}</td> 
+        <td>{{i.city}}</td> 
+        <td>{{i.state}}</td> 
+      </tr>
+  </table>

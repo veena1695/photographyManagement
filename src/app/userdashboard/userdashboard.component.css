@@ -1,0 +1,449 @@
+.bg-img {
+    /* The image used */
+    background-image: url("../../assets/9.jpg");
+  
+    min-height: 500px;
+    z-index : -1;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    /* Needed to position the navbar */
+    /* position: relative; */
+  }
+  .container {
+    /* position: bottom; */
+    margin: 1px;
+    width: 100%;
+    bottom: 10%;
+    left: 15%;
+    
+
+  }
+
+
+  /* The navbar */
+  .topnav {
+    overflow: hidden;
+    background-color: #F5D3CA;
+    width: 100%;
+    /* top: 1%; */
+  }
+  
+  /* Navbar links */
+  .topnav a {
+    float: left;
+    color:  #0a0909 ;
+    text-align: left;
+    padding: 6px 8px;
+    text-decoration: none;
+    font-size: 17px;
+   
+  }
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  .dropdown .dropbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: black;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    width: 400px;
+    text-align: left;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 400px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+
+  .vertical-menu {
+    width: 400px;
+    height: 180px;
+    overflow-y: auto;
+  }
+  
+  .vertical-menu a {
+    /* background-color: ; */
+    color: black;
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+  }
+  
+  .vertical-menu a:hover {
+    background-color: #ccc;
+  }
+
+  .para {
+    text-align: center;
+    font-size: 35px;
+    color: rgb(59, 55, 55);
+  }
+
+  .para1 {
+    text-align: center;
+    font-size: 30px;
+    color: rgb(59, 55, 55);
+  }
+
+  .img {
+    float : left;
+    position: absolute;
+    top: 2%;
+    left:3%;
+    width: 3%;
+    height:7%;
+}
+
+ .img1 {
+  float : left;
+  position: absolute;
+  top: 2%;
+  left:7%;
+  width: 3%;
+  height:7%;
+}
+
+.img2 {
+  float : left;
+  position: absolute;
+  top: 2%;
+  left:11%;
+  width: 3%;
+  height:7%;
+}
+.img3 {
+  float : left;
+  position: absolute;
+  top: 2%;
+  left:15%;
+  width: 3%;
+  height:7%;
+}
+.img4 {
+  float : left;
+  position: absolute;
+  top: 2%;
+  left:19%;
+  width: 3%;
+  height:7%;
+}
+.img5 {
+  float : left;
+  position: absolute;
+  top: 2%;
+  left:23%;
+  width: 3%;
+  height:7%;
+}
+.img6 {
+  float : left;
+  position: absolute;
+  top: 2%;
+  left:27%;
+  width: 3%;
+  height:7%;
+}
+.img7 {
+  float : left;
+  position: absolute;
+  top: 2%;
+  left:31%;
+  width: 3%;
+  height:7%;
+} 
+
+
+
+
+/*
+
+All grid code is placed in a 'supports' rule (feature query) at the bottom of the CSS (Line 77). 
+        
+The 'supports' rule will only run if your browser supports CSS grid.
+
+Flexbox is used as a fallback so that browsers which don't support grid will still recieve an identical layout.
+
+*/
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:500);
+
+:root {
+	/* Base font size */
+	font-size: 10px;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	min-height: 80vh;
+	background-color: #fafafa;
+}
+
+.container1 {
+	max-width: 120rem;
+	margin: 0 auto;
+	padding: 0 2rem 2rem;
+}
+
+
+.gallery {
+	display: flex;
+  flex-wrap: wrap;
+	/* Compensate for excess margin on outer gallery flex items */
+	margin: -1rem -1rem;
+}
+
+.gallery-item {
+  /* Minimum width of 24rem and grow to fit available space */
+  max-width: 360px;
+  max-height: 490px;
+	flex: 1 0 16em;
+	/* Margin value should be half of grid-gap value as margins on flex items don't collapse */
+	margin: 1rem;
+	box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+	overflow: hidden;
+}
+
+.gallery-image {
+	display: block;
+	width: 403px;
+	height: 350px;
+	object-fit: cover;
+	transition: transform 400ms ease-out;
+}
+
+.gallery-image:hover {
+	transform: scale(1.15);
+}
+
+/*
+
+The following rule will only run if your browser supports CSS grid.
+
+Remove or comment-out the code block below to see how the browser will fall-back to flexbox styling. 
+
+*/
+
+@supports (display: grid) {
+	.gallery {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+		grid-gap: 2rem;
+	}
+
+	.gallery,
+	.gallery-item {
+		margin: 0;
+	}
+}
+
+
+/* .logout{
+  
+ margin-top: 1%;
+  bottom: 2%; 
+  margin-left: 200px;
+} */
+
+  
+ 
+  
+
+
+
+
+
+html {
+  box-sizing: border-box !important;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: #333;
+  color: #fff;
+  font-size: 18px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 1.6;
+}
+
+.popup-btn {
+  outline: none;
+  border: none;
+  background: #eee;
+  font-size: 15px;
+  font-weight: bold;
+  max-width: 100px;
+  display: block;
+  /* width: 100%; */
+  padding: 10px 0;
+  /* margin: 50px auto 0; */
+  cursor: pointer;
+  transition: all .2s;
+  -webkit-transition: all .2s;
+  -moz-transition: all .2s;
+  -ms-transition: all .2s;
+  -o-transition: all .2s;
+  margin-left: 250px;
+  height: 70px;
+}
+
+.popup-btn:hover {
+  background: #ccc;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, .8);
+  z-index: 999;
+  display: none;
+}
+
+.popup-inner {
+  max-width: 600px;
+  padding: 50px 20px;
+  background: #eee;
+  color: #333;
+  min-height: 400px;
+  position: relative;
+  margin: 50px 0;
+  left: 50%;
+  transform: translateX(-50%) rotate(0);
+  -webkit-transform: translateX(-50%) rotate(0);
+  -moz-transform: translateX(-50%) rotate(0);
+  -ms-transform: translateX(-50%) rotate(0);
+  -o-transform: translateX(-50%) rotate(0);
+}
+
+.close-popup {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.close-popup .bar {
+  height: 3px;
+  background: #333;
+  width: 18px;
+  transform: rotate(45deg);
+  position: absolute;
+}
+
+.close-popup .bar:nth-child(1) {
+  transform: rotate(-45deg);
+}
+
+body.popup-active {
+  overflow: hidden;
+}
+
+body.popup-active .popup {
+  overflow-y: scroll;
+}
+
+
+
+
+
+
+
+
+#modalWindow {
+  position: fixed;
+  font-family: arial,helvetica, sans-serif;
+  top: 0px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  /* background: rgba(0, 0, 0, 0.4); */
+  z-index: 99999;
+  opacity:1;
+  overflow-y: auto;
+  /* transition: opacity 400ms linear; */
+  /* pointer-events: none; */
+  
+}
+#modalWindow:target {
+  opacity:1;
+  /* pointer-events: auto; */
+}
+#modalWindow > div {
+  width: 900px;
+  height: 500px;
+  position: relative;
+  margin: 10% auto;
+  padding: 20px 20px 13px 20px;
+  border: 0.1px solid;
+  border-color: gray;
+  /* border-color: black; */
+  box-shadow:  2px 3px;
+  /* border-width : 2px; */
+  background: white;
+  border-radius: 10px;
+}		
+
+.cross{
+  float: right;
+  width: 8mm;
+  height: 8mm;
+}
+
+.headings{
+  font-size: xx-large;
+  text-align : center;
+}

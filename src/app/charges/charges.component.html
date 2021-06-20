@@ -1,0 +1,21 @@
+
+<div class="form_field_wrapper">
+    <div class="field_container">
+        <label>My Photography Style</label>
+        <input type="text" [disabled]="true" [(ngModel)]="photoStyle" name=""/>
+      </div>
+  <div class="form_heading">
+    <label>Photo Package</label>
+<select [(ngModel)]="package">
+  <option *ngFor="let i of packageArr">{{i}}</option>
+</select>
+<br><br>
+<label>Photo + Video</label>
+<select [(ngModel)]="vpackage">
+  <option *ngFor="let i of vpackageArr">{{i}}</option>
+</select>
+</div>
+<br>
+<div class=""><input type="submit"  name="submit" id="submit" (click)="submit()" class="button"></div>
+
+</div>

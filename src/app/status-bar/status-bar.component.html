@@ -1,0 +1,36 @@
+<h2 *ngIf="status =='pending'">The Request is sent...Please wait for approval</h2>
+<h2 *ngIf="status =='acknow'">The Request has been acknowlwdged... you will be notified shortly.</h2>
+<h2 *ngIf="status =='accepted'">Your request has been accepted...Please proceed to payment tab to start using the application...</h2>
+<h2 *ngIf="status =='paid'">Payment Done ...</h2>
+<h2 *ngIf="status =='rejected'">Admin has rejected your request ...</h2>
+
+<div class="progress">
+<ul>
+  <li>
+    <img src="../../assets/sent.png"><br>
+    <i [ngClass]="getClass(1)"></i>
+    <p>Request Sent</p>
+  </li>
+  <li>
+    <img src="../../assets/read.png"><br>
+    <i [ngClass]="getClass(2)"></i>
+    <p>Read by Admin</p>
+  </li>
+  <li>
+    <img src="../../assets/acknowledge.png"><br>
+    <i [ngClass]="getClass(3)"></i>
+    <p>Acknowledgement</p>
+  </li>
+  <li>
+    <img src="../../assets/accepted.png"><br>
+    <i [ngClass]="getClass(4)"></i>
+    <p>Request accepted</p>
+  </li>
+  <li>
+    <img src="../../assets/payment.png"><br>
+    <i [ngClass]="getClass(5)"></i>
+    <p>Payment Done</p>
+  </li>
+</ul>
+
+</div>

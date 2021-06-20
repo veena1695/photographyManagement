@@ -1,0 +1,19 @@
+<style> 
+  table, th, td { 
+      border: 1px solid black; 
+      border-collapse: collapse; 
+      margin-left: 20px;
+      margin-top: 20px;
+  } 
+</style>  
+  
+  <table *ngIf="allUsers.length>0" style="width:90%"> 
+    <tr> 
+      <th *ngFor="let j of headings">{{j}}</th> 
+    </tr> 
+    <tr *ngFor = "let i of allUsers"> 
+        <td>{{i.name}}</td> 
+        <td>{{i.phone}}</td> 
+        <td>{{i.email}}</td> 
+      </tr>
+  </table>

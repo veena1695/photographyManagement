@@ -1,0 +1,23 @@
+<style> 
+  table, th, td { 
+      border: 1px solid black; 
+      border-collapse: collapse; 
+      margin-left: 20px;
+      margin-top: 20px;;
+  } 
+</style>  
+  
+  <table *ngIf="allReq.length>0" style="width:90%"> 
+    <tr> 
+      <th *ngFor="let j of headings">{{j}}</th> 
+    </tr> 
+    <tr *ngFor = "let i of allReq"> 
+        <td>{{i.name}}</td> 
+        <td>{{i.phone}}</td> 
+        <td>{{i.email}}</td> 
+        <td>{{i.status}}</td> 
+        <td>&nbsp;<input  *ngIf="i.status == 'pending'" type="button" value="Acknowledge" class="button-yellow" (click)="acknowledge(i)">
+        <input *ngIf="i.status == 'acknow'" type="button" value="Accept" class="button-green" (click)="accept(i)">&nbsp;
+        <input *ngIf="i.status == 'acknow'" type="button" value="Reject" class="button-red" (click)="reject(i)"></td> 
+      </tr>
+  </table>

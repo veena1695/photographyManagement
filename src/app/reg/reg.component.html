@@ -1,0 +1,73 @@
+<div class= "marquee"><ng-marquee>
+    <p style="font-size:20px; margin-top: 0.9%; font:bold ; font: italic;">We capture your memories forever</p>
+  </ng-marquee></div>
+  <div class="navbar">
+      <a (click)="goToHome()">Home</a>
+      
+      <div id="login" style="float:right"><a (click)="goToLogin()" >LogIn</a></div>
+      <div class="dropdown" id="register" style="float:right">
+          <button class="dropbtn">Register
+            
+          </button>
+          <div class="dropdown-content">
+            <a *ngFor="let item of reg" (click)="goToReg(item)">{{item}}</a>
+            
+          </div>
+        </div>
+    
+      <div style="float:right"><a href="#about"><label id="usrName"></label></a></div>
+    </div>
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" >
+      <div class="form_field_wrapper">
+        <div align="center"class="form_heading">
+          <h2><u>Register Here</u></h2>
+        </div>
+        <div class="field_container">
+          <label>Name</label>
+          <input type="text" formControlName="fullName" name="applyname" [ngClass]="submitted && name.invalid ? ['errorField']: 'applyname'" placeholder="John Doe" [(ngModel)]="obj.name">
+          <div *ngIf="submitted && name.invalid" class="invalid-feedback">
+            <div *ngIf="name.errors.required">First Name is required</div>
+          </div> 
+        </div>
+        <div class="field_container">
+          <label>Email</label>
+          <input type="email" formControlName="email" name="applyemail" placeholder="example@abc.com" [ngClass]="submitted && email.invalid  ? ['errorField']: 'applyname'" [(ngModel)]="obj.email" required />
+          <div *ngIf="submitted && email.invalid" class="invalid-feedback">
+            <div *ngIf="email.errors.required">Email is required</div>
+            <div *ngIf="email.errors.email || email.errors.pattern">Email is incorrect</div>
+          </div>
+        </div>
+        <div class="field_container">
+            <label for="Phone">Phone</label>
+            <input type="tel" formControlName="phone" name="phone" placeholder="6789899090" [ngClass]="submitted && phone.invalid  ? ['errorField']: 'applyname'" value="+910000000000" [(ngModel)]="obj.phone" required />
+            <div *ngIf="submitted && phone.invalid" class="invalid-feedback">
+            <div *ngIf="phone.errors.required">Phone is required</div>
+            <div *ngIf="phone.errors.minlength || phone.errors.maxlength ">Phone is invalid...Must be 10 digits only</div>
+            
+          </div>
+        </div>
+        <div class="field_container">
+              <label for="password">Password</label>
+              <input type="password" formControlName="password" name="pass" placeholder="Type your password" [ngClass]="submitted && password.invalid ? ['errorField']: 'applyname'" [(ngModel)]="pass" required minlength="4" />
+              <div *ngIf="submitted && password.invalid" class="invalid-feedback">
+            <div *ngIf="password.errors.required">Password is required</div>
+            <div *ngIf="password.errors.minlength">Password is invalid (Length has to be more than 6 )</div>
+          </div>
+        </div>
+        <div class="field_container">
+          <label for="password">Retype your Password</label>
+          <input type="password" formControlName="rpassword" name="repass" placeholder="Retype your password" [ngClass]="submitted && rpassword.invalid ? ['errorField']: 'applyname'" [(ngModel)]="rpass" required />
+          <div *ngIf="submitted && rpassword.invalid" class="invalid-feedback">
+            <div *ngIf="rpassword.errors.required">Password is required</div>
+            <div *ngIf="rpassword.errors.minlength">Password is invalid (Length has to be more than 6 )</div>
+          </div>
+          <div class="invalid-feedback" *ngIf="submitted && !rpassword.invalid !passValid">
+            <div >Passwords do not match</div>
+          </div>
+        </div>
+
+        <input type="button" value="Submit" (click)="addUser()" class="btn">
+        </div>      
+      </form>
+
+      

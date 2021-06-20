@@ -1,0 +1,316 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+.wrapper{
+	width: 100%;
+	height: auto;
+	min-height: 300px;
+	padding: 0 0px;
+}
+.slide{
+	width: 100%;
+	height: 650px;
+	position: relative;
+	background-image: url("../../assets/photo2.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.header{
+	position: relative;
+	padding: 60px 66px;
+}
+.header .logo{
+	float: left;
+}
+
+.header .menu{
+	float: right;
+}
+.menu ul li{
+	list-style: none;
+	display: inline-block;
+}
+
+.menu ul li a{
+	display: block;
+	padding: 15px;
+	color: white;
+	text-decoration: none;
+	font-size: 20px;
+	text-transform: uppercase;
+	font-family: Myriad Pro;
+}
+.slideTitle{
+	position: absolute;
+	top: 60%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+	font-family: Myriad Pro;
+}
+
+.slideTitle h1{
+	font-size: 50px;
+	text-align: center;
+}
+
+.slideTitle p{
+	font-size: 16px;
+	padding: 0 50px;
+	text-align: center;
+}
+
+.content{
+	padding:0 40px;
+}
+
+.content-title{
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+	padding: 35px 0;
+	float: left;
+}
+
+.content-title h2{
+	font-size: 38px;
+	font-family: Myriad Pro;
+}
+
+.border span{
+	width: 9px;
+	height: 9px;
+	margin: 0 3px;
+	background-color: #9aabcf;
+	border-radius: 100px;
+	display: inline-block;
+}
+
+p.content-desc{
+	font-size: 18px;
+	color: #393838;
+	padding: 0 5px;
+	width: 60%;
+	margin-left: 20%;
+	text-align: center;
+	display: inline-block;
+	float: left;
+	font-family: Myriad Pro;
+}
+
+.skill-section{
+	display: inline-block;
+	width: 100%;
+	float: left;
+	padding: 45px 0;
+
+}
+
+.skill-img{
+	width: 50%;
+	float: left;
+}
+
+.skill-img img{
+	width: 100%;
+}
+
+.skill-content{
+	width: 40%;
+	float: right;
+}
+
+h3.skill-title{
+	font-size: 28px;
+	font-family: Myriad Pro;
+	color: #393838;
+	font-weight: 500;
+	float: left;
+	width: 100%;
+}
+.skills{
+	width: 100%;
+	float: left;
+	padding-top: 27px;
+}
+
+.skills i{
+	color: #393838;
+	font-family: Myriad Pro;
+	clear: both;
+	float: left;
+	font-size: 18px;
+}
+
+.skills span{
+	width: 100%;
+	height: 25px;
+	margin-top: 5px;
+	border: 1px solid #9aabcf;
+	/* display: inline-block; */
+	float: left;
+}
+
+.skills span abbr{
+	width: 70%;
+	height: 25px;
+	background-color: #9aabcf;
+	display: inline-block;
+}
+
+.skills.speaking span abbr{
+	width: 80%;
+}
+
+.skills.efficiency span abbr{
+	width: 96%;
+}
+
+.skills.Ssss span abbr{
+	width: 50%;
+}
+
+.about-content, .desk-img{
+	width: 100%;
+	float: left;
+	display: inline-block;
+	font-family: Myriad Pro;
+	color: #393838;
+	padding: 35px 0;
+}
+.about-desc{
+	width: 50%;
+	float: left;
+	display: inline-block;
+}
+ .about-desc p{
+ 	padding-bottom: 10px;
+ }
+
+.about-img{
+	width: 45%;
+	float: right;
+	display: inline-block;
+}
+
+.about-img img{
+	width: 100%;
+}
+
+.desk-img img{
+	width: 30%;
+	margin-left: 10px;
+	/*margin-right: 10px;*/
+}
+
+.desk-img img.desk6{
+	margin: 0 3%;
+}
+
+.m-content{
+	margin-top: 35%;
+	font-size: 25px;
+	text-align: center;
+}
+
+
+.clearfix{}
+.column{
+	width: 30%;
+	display: inline-block;
+	float: left;
+	text-align: center;
+	color: #393838;
+	font-family: Myriad Pro;
+	padding: 0 20px;
+	box-sizing: border-box;
+}
+
+.column.col2{
+	margin: 0 4%;
+}
+
+.column.col3{
+	float: right;
+}
+
+.column p{
+	padding-top: 10px;
+}
+
+.content.ourteam{
+	padding-top: 35px;
+	clear: left;
+}
+
+.tm, .employer{
+	display: inline-block;
+	width: 100%;
+	float: left;
+	padding-top: 25px;
+	box-sizing: border-box;
+	font-family: Myriad Pro;
+}
+
+.employer{
+	padding: 0 35px;
+}
+
+/*.employer-image{
+	width: 25%;
+	float: left;
+}
+*/
+.employer-image{
+	width: 40%;
+	float: left;
+}
+
+.employer-image img{
+	width: 100%;
+}
+
+.emplyer-detail{
+	width: 50%;
+	float: right;
+	padding-left: 50px;
+	padding-top: 15px;
+}
+
+.emplyer-detail h3{
+	padding-bottom: 10px;
+}
+.emplyer-detail h5{
+	padding-bottom: 10px;
+}
+
+.emplyer-detail p{
+	font-weight: normal;
+}
+
+.employer-image1{
+	width: 40%;
+	float: right;
+}
+
+.employer-image1 img{
+	width: 100%;
+}
+
+.emplyer-detail1{
+	width: 50%;
+	float: left;
+	padding-left: 50px;
+	padding-top: 15px;
+}
+
+
+
+
+
+
+
+

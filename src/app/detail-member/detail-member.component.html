@@ -1,0 +1,89 @@
+<div class="navbar">
+    <a (click)="goBack()">Back to Home Page</a>
+    <a >Contact</a>
+    <div id="login" style="float:right"><a  (click)="goToLogin()">Logout</a></div>
+    <div id="login" style="float:right"><a  (click)="goToLogin()"><i class="fas fa-pen-alt"></i> Write a Review</a></div>
+</div>
+<br>
+<div class="container">
+<img [src]="profileImg" style="width:50%;" class="img">
+<div class="text-block">
+  <br>
+    <p>&nbsp;&nbsp;<b>{{memberObj.name}} </b></p>&nbsp;&nbsp;&nbsp;&nbsp;
+    <p>&nbsp;&nbsp;&nbsp;<i class="fas fa-map-marker-alt"></i> &nbsp;&nbsp;
+       {{memberObj.city}},{{memberObj.state}}
+      <br> 
+    <div class="phnclr"> <p>&nbsp;&nbsp;&nbsp;<i class="fas fa-phone-alt" style="color:#009A09;"></i>
+      &nbsp;&nbsp;Contact</p></div>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     <p>&nbsp;&nbsp;&nbsp;<i class="far fa-heart" style="color:#E72E77;"></i>
+          &nbsp;Shortlist &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <i class="fas fa-share-alt"></i>
+        &nbsp;Share &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <i class="fas fa-images"></i>
+          &nbsp;&nbsp;Album
+      </p>
+      </div>
+</div>
+
+<div class="ex1"> 
+  <br>
+  <p><b>&nbsp;&nbsp;&nbsp;Per Day Price Estimate:</b></p>&nbsp;&nbsp;&nbsp;&nbsp;
+  <hr>&nbsp;&nbsp;&nbsp;&nbsp;
+  <p>&nbsp;&nbsp;&nbsp;<i class="fas fa-rupee-sign"></i>&nbsp;{{memberObj.charges}} per day&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    Photo Package
+    </p>
+    <br>
+  <hr>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <p>&nbsp;&nbsp;&nbsp;<i class="fas fa-rupee-sign"></i>&nbsp;{{memberObj.vidCharges}} per day&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    Photo + Video
+  </p>
+</div>
+<br>
+<div class="ex2"> 
+  <div class="col">
+   <div class="container">
+      
+        <input type="text" id="name" name="name" [(ngModel)]="name" placeholder="Your name..">
+        &nbsp;&nbsp;&nbsp;<!--&nbsp;&nbsp;&nbsp; -->
+        <input type="tel" id="phone" name="phone" [(ngModel)]="phone" placeholder="Your Phone no..">
+
+        <input type="email" id="mail" name="mail" [(ngModel)]="email" placeholder="Your Email..">
+        &nbsp;&nbsp;&nbsp;<!--&nbsp;&nbsp;&nbsp; -->
+        <input type="date" id="date" name="date" [(ngModel)]="date" placeholder="Your function date..">
+    
+        <textarea id="subject" name="subject" [(ngModel)]="details" placeholder="Details about my Event.." style="height:100"></textarea>
+        <br>
+        
+        <button (click)="sendReq()" class="mbtn pink" ><i class="fas fa-pen-fancy"></i>&nbsp;&nbsp; Send Inquiry</button>
+        <button class="mbtn green"><i class="fas fa-phone-alt"></i> &nbsp;&nbsp;View Contact</button>
+
+      </div>
+    </div>
+  </div>
+  <br>
+  <p><b>&nbsp;Portfolio</b></p>
+  <div class="gallery">
+    <!-- <hr> -->
+  <div class="gallery-item" *ngFor="let i of allImages" >
+      <!-- <div class="gallery-item" *ngFor="let j of i"> -->
+        <img [src]=i class="gallery-image" alt="No Image" style="width:100%">
+      <!-- </div> -->
+    </div>
+      </div>
+    <br><br>
+    <div class="ex4">
+      <br>
+      &nbsp;<b>About {{memberObj.name}}</b>
+      <hr>
+      <p>
+          {{memberObj.about}}
+      </p>
+      <br>
+    </div>
+    

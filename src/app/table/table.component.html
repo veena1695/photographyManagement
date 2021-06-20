@@ -1,0 +1,26 @@
+<style> 
+  table, th, td { 
+      border: 1px solid black; 
+      border-collapse: collapse; 
+      margin-left: 20px;
+      margin-top: 20px;;
+  } 
+</style>  
+
+<h1 *ngIf="msg!=''">{{msg}}</h1>
+  
+<table *ngIf="requestArr.length>0" style="width:90%"> 
+ 
+  <tr> 
+      <th *ngFor="let i of menuArr">{{i}}</th> 
+  </tr> 
+  <tr *ngFor="let j of requestArr"> 
+      <td>{{j.name}}</td> 
+      <td>{{j.phone}}</td> 
+      <td>{{j.email}}</td> 
+      <td>{{j.reqdate}}</td> 
+      <td>{{j.details}}</td> 
+      <td> <button *ngIf="j.status == 'pending'" type="submit" class="button" (click)="accept(j)">Accept</button>&nbsp;&nbsp;<button *ngIf="j.status == 'pending'" type="submit" class="button" (click)="reject(j)">Reject</button> </td>
+      <td>{{j.status}}</td>
+  </tr> 
+</table> 

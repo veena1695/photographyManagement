@@ -1,0 +1,160 @@
+<!-- <div class="navbar">
+    <img src="../../assets/photo-camera.png" class="img">
+  <img src="../../assets/wedding-couple.png" class="img1"> 
+  <img src="../../assets/rings.png" class="img2"> 
+  <img src="../../assets/birthday-cake.png" class="img3"> 
+  <img src="../../assets/restaurant.png" class="img4"> 
+  <img src="../../assets/girl.png" class="img5">
+  <img src="../../assets/boy.png" class="img6">
+  <img src="../../assets/pool.png" class="img7">
+
+  
+  
+</div> -->
+<!-- <div id="logout" style="float:right"><a (click)="logout()">Logout</a></div> -->
+<div *ngIf ="detailFlag==false">
+
+
+  <div class="bg-img">
+  <div class="container">
+    
+    <div class="topnav">
+        
+      <div class="dropdown">
+        
+        <button class="dropbtn">Select Your PhotoGraphy Style&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <div class="vertical-menu">
+          <a href="#">Family Photography</a>
+          <a href="#">Wedding Photography</a>
+          <a href="#">Pre-wedding Photography</a>
+          <a href="#">Baby-Shower</a>
+          <a href="#">Engagement</a>
+          <a href="#">Food Photography</a>
+          <a href="#">Outdoor Photography</a>
+          </div>
+
+        </div>
+      </div> 
+        <div class="dropdown">
+          <button class="dropbtn">Select City&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <div class="vertical-menu">
+            <a href="#">Mumbai</a>
+            <a href="#">Delhi</a>
+            <a href="#">Bangalore</a>
+            <a href="#">Hyderabad</a>
+            <a href="#">Ahmedabad</a>
+            <a href="#">Chennai</a>
+            <a href="#">Kolkata</a>
+            <a href="#">Surat</a>
+            <a href="#">Pune</a>
+            <a href="#">Jaipur</a>
+            <a href="#">Lucknow</a>
+            <a href="#">Kanpur</a>
+            <a href="#">Nagpur</a>
+            <a href="#">Indore</a>
+            <a href="#">Thane</a>
+            <a href="#">Bhopal</a>
+            <a href="#">Pimpri-Chinchwad</a>
+            <a href="#">Vadodara</a>
+            <a href="#">Agra</a>
+            <a href="#">Nashik</a>
+            <a href="#">Navi Mumbai</a>
+            <a href="#">Kolhapur</a>
+            <a href="#">Mangalore</a>
+          </div>
+        </div> 
+        </div>
+        <!-- <input type="button" value="Get Started" style="background-color: white;  height: 30px;"> -->
+        <a href="#home">Get Started</a>
+        <div class="logout" style="float:right"><a (click)="logout()">Logout</a></div>
+
+        <button class="popup-btn" style="float:right">
+            
+            <a (click)="togglePopUp(true)"><span style="font-size:130%;color:rgb(231, 27, 27);">*</span>New Message</a>
+        </button>
+       <!-- <div class="container"> -->
+            <!-- <button class="popup-btn" style="float:right">
+                <span style="font-size:130%;color:rgb(231, 27, 27);">*</span>
+              New Message</button>
+            <div class="popup">
+              <div class="popup-inner">
+                <h1>Lorem Ipsum Dolor</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                   Facilis repudiandae quasi aliquam ipsa accusantium aut error ut, omnis animi numquam.
+                    Quidem explicabo sequi illum, soluta pariatur iste veritatis aut fugiat? Lorem ipsum dolor
+                    t amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                     Facilis repudiandae quasi aliquam ipsa accusantium aut error ut, omnis animi numquam. 
+                     Quidem explicabo sequi illum, soluta pariatur iste veritatis aut fugiat? Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis repudiandae quasi aliquam ipsa accusantium aut error ut, omnis animi numquam.consectetur adipisicing elit. Facilis repudiandae quasi aliquam ipsa accusantium aut error ut, omnis animi numquam. Quidem explicabo sequi illum, soluta pariatur iste veritatis aut fugiat? Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis repudiandae quasi aliquam ipsa accusantium aut error ut, omnis animi numquam. Quidem explicabo sequi illum, soluta pariatur iste veritatis aut fugiat? Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis repudiandae quasi aliquam ipsa accusantium</p>
+                <div class="close-popup">
+                  <span class="bar"></span>
+                  <span class="bar"></span>
+                </div>                
+              </div>
+            </div> -->
+          <!-- </div> -->
+        
+
+  </div>
+  </div>
+  </div>
+  <br>
+  <br>
+  <div class="para"><b>Find Photographers At Every Budget</b></div>
+  <div class="para1"><i>We capture your memories forever</i></div>
+  <br>
+  <br>
+  <br>
+    <div class="container1">
+
+      
+        <div class="gallery">
+      
+          <div *ngFor="let i of dispArr" (click)="getDetails(i)" class="gallery-item">
+            <img *ngIf="i.url" class="gallery-image" [src]="i.url" alt="Member has not uploaded any photos">
+            <img *ngIf="!i.url" class="gallery-image" src="../../assets/altImg.jpg" alt="Member has not uploaded any photos">
+            <p>{{i.photoStyle}}</p>
+            <p>{{i.name}}</p><i class="fas fa-rupee-sign"></i>&nbsp;
+            {{i.charges}} per day  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Photo Package      
+          </div>
+        </div> 
+        <br><br>
+        <input *ngIf="dispArr.length==8" type="button" value="Next Page" (click)="getMembersAndImages('next')">
+        <input *ngIf="allArr.length>dispArr.length && offset !=0" type="button" value="Previous" (click)="getMembersAndImages('prev')">
+      
+      </div>
+      <div *ngIf="showFlag == true" id="modalWindow">
+        <div>
+          <button class="cross" (click)="togglePopUp(false)"><b>X</b></button><br>
+          <p class="headings">Requests</p><br>
+          <table border="1" style="width:90%">
+            <tr>
+              <th *ngFor="let i of headings">{{i}}</th>
+            </tr>
+            <tr *ngFor="let j of memReq">
+              <td>{{j.name}}</td>
+              <td>{{j.reqdate}}</td>
+              <td>{{j.details}}</td>
+              <td>{{j.status}}</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+  </div>
+  <div *ngIf="detailFlag==true">
+    <router-outlet></router-outlet>
+  </div>
